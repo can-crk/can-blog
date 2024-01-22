@@ -1,4 +1,4 @@
-baseURL: https://example.org/
-languageCode: en-us
+baseURL: https://can-dev.de/can-blog/
+languageCode: de
 title: My New Hugo Site
 theme: PaperMod
