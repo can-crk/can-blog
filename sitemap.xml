@@ -2,13 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://can-dev.de/can-blog/docs/</loc>
-    <lastmod>2024-01-22T11:02:52+01:00</lastmod>
-  </url><url>
     <loc>https://can-dev.de/can-blog/</loc>
     <lastmod>2024-01-22T11:02:52+01:00</lastmod>
   </url><url>
-    <loc>https://can-dev.de/can-blog/docs/hugo-ghp-tutorial/</loc>
+    <loc>https://can-dev.de/can-blog/pages/datenschutzerklaerung/</loc>
+    <lastmod>2024-01-22T11:02:52+01:00</lastmod>
+  </url><url>
+    <loc>https://can-dev.de/can-blog/pages/impressum/</loc>
+    <lastmod>2024-01-22T11:02:52+01:00</lastmod>
+  </url><url>
+    <loc>https://can-dev.de/can-blog/pages/</loc>
+    <lastmod>2024-01-22T11:02:52+01:00</lastmod>
+  </url><url>
+    <loc>https://can-dev.de/can-blog/posts/</loc>
+    <lastmod>2024-01-22T11:02:52+01:00</lastmod>
+  </url><url>
+    <loc>https://can-dev.de/can-blog/posts/hugo-ghp-tutorial/</loc>
     <lastmod>2024-01-22T11:02:52+01:00</lastmod>
   </url><url>
     <loc>https://can-dev.de/can-blog/categories/</loc>

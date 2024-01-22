@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Tutorial: Hugo und GitHub Pages | Can&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Hugo installieren # Das dnf-Repository hält zZt. nur eine sehr alte Verison von Hugo bereit curl # aktuelle version von der Seite einfügen: https://github.com/gohugoio/hugo/releases tar zxfv hugo....tar.gz mv hugo /usr/bin #check hugo version Neue Hugo-Seite erstellen hugo new site it-kongress-demo --format yml cd it-kongress-demo Den ersten Blog-Post erstellen hugo new docs/test.md nano content/docs/test.md # draft auf false setzen und etwas schreiben Git und Theme git init # Ein Theme aussuchen (https://themes.">
+<meta name="author" content="">
+<link rel="canonical" href="https://can-dev.de/can-blog/posts/hugo-ghp-tutorial/">
+<link crossorigin="anonymous" href="/can-blog/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://can-dev.de/can-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://can-dev.de/can-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://can-dev.de/can-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://can-dev.de/can-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://can-dev.de/can-blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Tutorial: Hugo und GitHub Pages" />
+<meta property="og:description" content="Hugo installieren # Das dnf-Repository hält zZt. nur eine sehr alte Verison von Hugo bereit curl # aktuelle version von der Seite einfügen: https://github.com/gohugoio/hugo/releases tar zxfv hugo....tar.gz mv hugo /usr/bin #check hugo version Neue Hugo-Seite erstellen hugo new site it-kongress-demo --format yml cd it-kongress-demo Den ersten Blog-Post erstellen hugo new docs/test.md nano content/docs/test.md # draft auf false setzen und etwas schreiben Git und Theme git init # Ein Theme aussuchen (https://themes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://can-dev.de/can-blog/posts/hugo-ghp-tutorial/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-22T11:02:52+01:00" />
+<meta property="article:modified_time" content="2024-01-22T11:02:52+01:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tutorial: Hugo und GitHub Pages"/>
+<meta name="twitter:description" content="Hugo installieren # Das dnf-Repository hält zZt. nur eine sehr alte Verison von Hugo bereit curl # aktuelle version von der Seite einfügen: https://github.com/gohugoio/hugo/releases tar zxfv hugo....tar.gz mv hugo /usr/bin #check hugo version Neue Hugo-Seite erstellen hugo new site it-kongress-demo --format yml cd it-kongress-demo Den ersten Blog-Post erstellen hugo new docs/test.md nano content/docs/test.md # draft auf false setzen und etwas schreiben Git und Theme git init # Ein Theme aussuchen (https://themes."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://can-dev.de/can-blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Tutorial: Hugo und GitHub Pages",
+      "item": "https://can-dev.de/can-blog/posts/hugo-ghp-tutorial/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Tutorial: Hugo und GitHub Pages",
+  "name": "Tutorial: Hugo und GitHub Pages",
+  "description": "Hugo installieren # Das dnf-Repository hält zZt. nur eine sehr alte Verison von Hugo bereit curl # aktuelle version von der Seite einfügen: https://github.com/gohugoio/hugo/releases tar zxfv hugo....tar.gz mv hugo /usr/bin #check hugo version Neue Hugo-Seite erstellen hugo new site it-kongress-demo --format yml cd it-kongress-demo Den ersten Blog-Post erstellen hugo new docs/test.md nano content/docs/test.md # draft auf false setzen und etwas schreiben Git und Theme git init # Ein Theme aussuchen (https://themes.",
+  "keywords": [
+    
+  ],
+  "articleBody": " Hugo installieren # Das dnf-Repository hält zZt. nur eine sehr alte Verison von Hugo bereit curl # aktuelle version von der Seite einfügen: https://github.com/gohugoio/hugo/releases tar zxfv hugo....tar.gz mv hugo /usr/bin #check hugo version Neue Hugo-Seite erstellen hugo new site it-kongress-demo --format yml cd it-kongress-demo Den ersten Blog-Post erstellen hugo new docs/test.md nano content/docs/test.md # draft auf false setzen und etwas schreiben Git und Theme git init # Ein Theme aussuchen (https://themes.gohugo.io/) und die Schritte zur installation befolgen # Nachfolgend wird PaperMod exemplarisch gezeigt git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod echo \"theme: PaperMod\" \u003e\u003e hugo.yml # Zum testen hugo server # Neues Repository auf GitHub erstellen mit dem namen der hugo seite # wenn es die default gh-page sein soll {username}.github.io # Branch \"gh-pages\" erstellen # Settings \u003e Actions \u003e General \u003e Read and Write Permissions echo \"# it-kongress-demo\" \u003e\u003e README.md git add . git commit -m \"first commit\" git branch -M main git remote add origin git@github.com:can-crk/it-kongress-demo.git git push -u origin main GitHub Workflow einrichten mkdir -p .github/workflows nano .github/workflows/deploy.yml In die Datei kommt das:\nname: Publish to GH Pages on: push: branches: - main pull_request: jobs: deploy: runs-on: ubuntu-latest steps: - name: Checkout source uses: actions/checkout@v3 with: submodules: true - name: Checkout destination uses: actions/checkout@v3 if: github.ref == 'refs/heads/main' with: ref: gh-pages path: built-site - name: Setup Hugo run: | curl -L -o /tmp/hugo.tar.gz 'https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_0.121.2_linux-amd64.tar.gz' tar -C ${RUNNER_TEMP} -zxvf /tmp/hugo.tar.gz hugo - name: Build run: ${RUNNER_TEMP}/hugo - name: Deploy if: github.ref == 'refs/heads/main' run: | cp -R public/* ${GITHUB_WORKSPACE}/built-site/ cd ${GITHUB_WORKSPACE}/built-site git add . git config user.name 'can-crk' git config user.email 'canc2211@gmail.com' git commit -m 'Updated site' git push Auf GitHub pushen git add . git commit -m \"first commit\" git push -u origin main DNS-Einträge anlegen https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site nano hugo.yml #baseurl auf die eigene domain setzen ",
+  "wordCount" : "297",
+  "inLanguage": "en",
+  "datePublished": "2024-01-22T11:02:52+01:00",
+  "dateModified": "2024-01-22T11:02:52+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://can-dev.de/can-blog/posts/hugo-ghp-tutorial/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Can's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://can-dev.de/can-blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://can-dev.de/can-blog/" accesskey="h" title="Can&#39;s Blog (Alt + H)">Can&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://can-dev.de/can-blog/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://can-dev.de/can-blog/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Tutorial: Hugo und GitHub Pages
+    </h1>
+    <div class="post-meta"><span title='2024-01-22 11:02:52 +0100 +0100'>January 22, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><ol>
+<li>Hugo installieren</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Das dnf-Repository hält zZt. nur eine sehr alte Verison von Hugo bereit</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl <span style="color:#75715e"># aktuelle version von der Seite einfügen: https://github.com/gohugoio/hugo/releases </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>tar zxfv hugo....tar.gz
+</span></span><span style="display:flex;"><span>mv hugo /usr/bin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#check</span>
+</span></span><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><ol start="2">
+<li>Neue Hugo-Seite erstellen</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site it-kongress-demo --format yml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd it-kongress-demo
+</span></span></code></pre></div><ol start="3">
+<li>Den ersten Blog-Post erstellen</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new docs/test.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nano content/docs/test.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># draft auf false setzen und etwas schreiben</span>
+</span></span></code></pre></div><ol start="4">
+<li>Git und Theme</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ein Theme aussuchen (https://themes.gohugo.io/) und die Schritte zur installation befolgen</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Nachfolgend wird PaperMod exemplarisch gezeigt</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git submodule add --depth<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme: PaperMod&#34;</span> &gt;&gt; hugo.yml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Zum testen</span>
+</span></span><span style="display:flex;"><span>hugo server
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Neues Repository auf GitHub erstellen mit dem namen der hugo seite</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># wenn es die default gh-page sein soll {username}.github.io</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Branch &#34;gh-pages&#34; erstellen</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Settings &gt; Actions &gt; General &gt; Read and Write Permissions</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;# it-kongress-demo&#34;</span> &gt;&gt; README.md
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git remote add origin git@github.com:can-crk/it-kongress-demo.git
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><ol start="5">
+<li>GitHub Workflow einrichten</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p .github/workflows
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nano .github/workflows/deploy.yml
+</span></span></code></pre></div><p>In die Datei kommt das:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>name: Publish to GH Pages
+</span></span><span style="display:flex;"><span>on:
+</span></span><span style="display:flex;"><span>  push:
+</span></span><span style="display:flex;"><span>    branches:
+</span></span><span style="display:flex;"><span>      - main
+</span></span><span style="display:flex;"><span>  pull_request:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>jobs:
+</span></span><span style="display:flex;"><span>  deploy:
+</span></span><span style="display:flex;"><span>    runs-on: ubuntu-latest
+</span></span><span style="display:flex;"><span>    steps:
+</span></span><span style="display:flex;"><span>      - name: Checkout source
+</span></span><span style="display:flex;"><span>        uses: actions/checkout@v3
+</span></span><span style="display:flex;"><span>        with:
+</span></span><span style="display:flex;"><span>          submodules: true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - name: Checkout destination
+</span></span><span style="display:flex;"><span>        uses: actions/checkout@v3
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>: github.ref <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;refs/heads/main&#39;</span>
+</span></span><span style="display:flex;"><span>        with:
+</span></span><span style="display:flex;"><span>          ref: gh-pages
+</span></span><span style="display:flex;"><span>          path: built-site
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - name: Setup Hugo
+</span></span><span style="display:flex;"><span>        run: |
+</span></span><span style="display:flex;"><span>          curl -L -o /tmp/hugo.tar.gz <span style="color:#e6db74">&#39;https://github.com/gohugoio/hugo/releases/download/v0.121.2/hugo_0.121.2_linux-amd64.tar.gz&#39;</span>
+</span></span><span style="display:flex;"><span>          tar -C <span style="color:#e6db74">${</span>RUNNER_TEMP<span style="color:#e6db74">}</span> -zxvf /tmp/hugo.tar.gz hugo          
+</span></span><span style="display:flex;"><span>      - name: Build
+</span></span><span style="display:flex;"><span>        run: <span style="color:#e6db74">${</span>RUNNER_TEMP<span style="color:#e6db74">}</span>/hugo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - name: Deploy
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>: github.ref <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;refs/heads/main&#39;</span>
+</span></span><span style="display:flex;"><span>        run: |
+</span></span><span style="display:flex;"><span>          cp -R public/* <span style="color:#e6db74">${</span>GITHUB_WORKSPACE<span style="color:#e6db74">}</span>/built-site/
+</span></span><span style="display:flex;"><span>          cd <span style="color:#e6db74">${</span>GITHUB_WORKSPACE<span style="color:#e6db74">}</span>/built-site
+</span></span><span style="display:flex;"><span>          git add .
+</span></span><span style="display:flex;"><span>          git config user.name <span style="color:#e6db74">&#39;can-crk&#39;</span>
+</span></span><span style="display:flex;"><span>          git config user.email <span style="color:#e6db74">&#39;canc2211@gmail.com&#39;</span>
+</span></span><span style="display:flex;"><span>          git commit -m <span style="color:#e6db74">&#39;Updated site&#39;</span>
+</span></span><span style="display:flex;"><span>          git push   
+</span></span></code></pre></div><ol start="6">
+<li>Auf GitHub pushen</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><ol start="7">
+<li>DNS-Einträge anlegen
+<a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site</a></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano hugo.yml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#baseurl auf die eigene domain setzen</span>
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://can-dev.de/can-blog/">Can&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+    | <span class="static"><a href="/can-blog/pages/datenschutzerklaerung">Datenschutzerklärung</a> |
+            <a href="/can-blog/pages/impressum">Impressum</a></span>
+
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
